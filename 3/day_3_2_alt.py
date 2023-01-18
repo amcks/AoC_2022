@@ -20,21 +20,20 @@ sub_gen = []
 i = 0
 
 for line in input_gen:
-    if line:
-        if i % 3 == 0 and i != 0:
-            prio_list.append(''.join(set.intersection(
-                set(sub_gen[0].strip()),
-                set(sub_gen[1].strip()),
-                set(sub_gen[2].strip())
-                )))
+    if i % 3 == 0 and i != 0:
+        prio_list.append(''.join(set.intersection(
+            set(sub_gen[0].strip()),
+            set(sub_gen[1].strip()),
+            set(sub_gen[2].strip())
+            )))
 
-            sub_gen = []
-            sub_gen.append(line)
-            i += 1
+        sub_gen = []
+        sub_gen.append(line)
+        i += 1
 
-        else:
-            sub_gen.append(line)
-            i += 1
+    else:
+        sub_gen.append(line)
+        i += 1
 
 
 prio_score = [prio_dict.index(prio_list[i]) for i in range(len(prio_list))]
