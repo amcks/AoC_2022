@@ -19,6 +19,7 @@ def gen_read(file_path):
         i += 3
 
 
+# Process data from generator function
 input_gen = gen_read(r'./input_3')
 prio_list = []
 for sub_gen in input_gen:
@@ -28,6 +29,7 @@ for sub_gen in input_gen:
         set(sub_gen[2].strip())
         )))
 
+# Check score with pseudo-dictionary
 prio_score = [prio_dict.index(prio_list[i]) for i in range(len(prio_list))]
 
 # Current dictionary uses python indexing

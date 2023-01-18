@@ -13,10 +13,11 @@ with open(r'./input_1', "r") as f:
         else:
             chnk[-1] += int(line)
 
-# Answer to Part 1
+# Print result
 print("Initial max calories: %i" % max(chnk))
 
 # ---------------
+# Part 2
 # Set up lists & iteration indices
 i = 0
 top_i = 3
@@ -28,6 +29,7 @@ while i < top_i:
     chnk.remove(max(chnk))
     i += 1
 
+# Print result
 print("Calories from top 3 elves: %i" % chnk_top)
 
 print("--- %s seconds ---" % (time.time()-st))

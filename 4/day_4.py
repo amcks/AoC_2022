@@ -9,10 +9,12 @@ def gen_func(file_path):
         yield line
 
 
+# Set up initial counters for both parts
 input_gen = gen_func(r'./input_4')
 fullcont = 0
 olap = 0
 
+# Extract data & use set operations
 for line in input_gen:
     rang_1, rang_2 = line.strip().split(",")
     a, b = rang_1.split("-")
@@ -24,6 +26,7 @@ for line in input_gen:
         if set_1.issubset(set_2) or set_2.issubset(set_1):
             fullcont += 1
 
+# Print results
 print("Number of full containment cases: %s" % fullcont)
 
 print("Number of partial overlapping cases: %s" % olap)

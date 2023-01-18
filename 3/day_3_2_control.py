@@ -21,6 +21,8 @@ while i < len(input)-3:
 
     i += 3
 
+
+# Check score with pseudo-dictionary
 prio_score = [prio_dict.index(prio_list[i]) for i in range(len(prio_list))]
 
 # Current dictionary uses python indexing

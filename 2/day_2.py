@@ -24,9 +24,11 @@ tot_score = 0
 for i in raw:
     tot_score += strat[i]
 
+# Print result
 print("This strategy would have given me %s points" % tot_score)
 
 # ------------
+# Part 2
 # Redefine dictionary with the correct strategy
 true_strat = {
         "A X": 3,
@@ -45,6 +47,7 @@ new_score = 0
 for j in raw:
     new_score += true_strat[j]
 
+# Print result
 print("The correct strategy would have given me %s points" % new_score)
 
 print("--- %s seconds ---" % (time.time()-st))
