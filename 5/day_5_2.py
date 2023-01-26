@@ -4,13 +4,8 @@ import time
 st = time.time()
 
 
-# Set up generator function to import input
-def gen_func(file_path):
-    for line in open(file_path, "r"):
-        yield line
-
-
-input_gen = gen_func(r'./input_5')
+# Directly set up generator expression
+input_gen = (line for line in open(r'./input_5'))
 
 # Create coordinate matrix for box positions
 pos_mat = []
